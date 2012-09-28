@@ -15,15 +15,20 @@ TEST(ArrayQueue, Dequeue) {
 	q->enqueue(10);
 	EXPECT_EQ(10, q->dequeue());
 	EXPECT_EQ(0, q->size());
+	EXPECT_EQ(1, q->isEmpty());
 	delete q;
 }
 
 TEST(ArrayQueue, Resize) {
 	AQueue* q = new AQueue();
-	for (int i=1;i<=11;++i){
+	for (int i=1;i<=31;++i){
 		q->enqueue(i);
 	}
-	EXPECT_EQ(11, q->size());
+	EXPECT_EQ(31, q->size());
+	for(int j=1;j<=31;++j){
+		q->dequeue();
+	}
+	EXPECT_EQ(1, q->isEmpty());
 	delete q;
 }
 
@@ -33,6 +38,8 @@ TEST(LLQueue, Dequeue) {
 	q->enqueue(10);
 	EXPECT_EQ(10, q->dequeue());
 	EXPECT_EQ(0, q->size());
+	EXPECT_EQ(1, q->isEmpty());
+
 	delete q;
 }
 
@@ -42,5 +49,6 @@ TEST(SQueue, Dequeue) {
 	q->enqueue(10);
 	EXPECT_EQ(10, q->dequeue());
 	EXPECT_EQ(0, q->size());
+	EXPECT_EQ(1, q->isEmpty());
 	delete q;
 }
