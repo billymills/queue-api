@@ -33,6 +33,7 @@ int AQueue::dequeue() {
 		for (int i=0;i<queueSize;++i){
 			newQueue[i]=theQueue[(front+i)%capacity];
 		}
+		assert(!(minArraySize>capacity));
 		delete theQueue;
 		theQueue=newQueue; //reassign pointer
 		capacity /= 2; //update capacity
