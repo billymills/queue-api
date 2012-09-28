@@ -1,1 +1,1 @@
-Integer Queue API in c++ using three structures: raw array, linked list, and std list.  Makefiles used to build timing test targets in build directory and google unit test target in test directory.
+Integer Queue API in c++ using three structures: raw array, linked list, and std list.  Makefiles used to build timing test targets in build directory and google unit test target in test directory. Three timing test targets will be built, one for each implementation, one unit test will be built.
